@@ -137,7 +137,7 @@ figcaption{
 
 blockquote{
      margin-top: 1rem;
-     font-family: 'GlacialIndifferenceRegular';
+     font-family: 'GlacialIndifferenceRegular', 'lato', sans-serif;
      font-weight: normal;
      font-style: normal;
      text-transform: uppercase;
@@ -161,14 +161,10 @@ blockquote{
      }
 }
 
-@media screen and (min-width:1236px){
-     #image{
-     }
-}
 
 /****section #tribute-info***/
 #tribute-info{
-     background: url('/images/bg.png') ;
+     background: url('../images/bg.png') ;
      margin:2rem auto 0;
 
 
