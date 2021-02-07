@@ -68,7 +68,7 @@ body{
      opacity: 1;
 }
 #img-div:hover::after{
-     /* opacity: 1; */
+
      display: block;
      width: 250px;
      height: fit-content;
@@ -137,7 +137,7 @@ figcaption{
 
 blockquote{
      margin-top: 1rem;
-     font-family: 'GlacialIndifferenceRegular', 'lato', sans-serif;
+     font-family: 'GlacialIndifferenceRegular', 'Lato', sans-serif;
      font-weight: normal;
      font-style: normal;
      text-transform: uppercase;
@@ -164,7 +164,8 @@ blockquote{
 
 /****section #tribute-info***/
 #tribute-info{
-     background: url('../images/bg.png') ;
+     background: url('../images/bg.png');
+     background: 'https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png'
      margin:2rem auto 0;
 
 
