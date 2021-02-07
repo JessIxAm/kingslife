@@ -17,6 +17,7 @@ body{
 }
 
 #main{
+     background-color: #101010;
 }
 /**/
 /**/
@@ -25,6 +26,7 @@ body{
 /**/
 /** section hero */
 #hero{
+     margin:0 auto;
      margin-top:2rem;
      background-color: #101010;
      color: #ebebeb;
@@ -37,16 +39,42 @@ body{
      flex-direction: column;
      justify-content: space-between;
 
+     
+     max-width: 1200px;
+
 }
 #img-div{
      padding: 1rem;
-     padding-top:1rem;
-
-
-     margin-left: -1rem;
-     margin-right: -1rem;
-
+     padding-top:1rem; 
+     text-align: center;
 }
+
+#img-div::after{
+     content:"From Left to right: The Rev. Ralph David Abernathy Sr | the Rev. Jesse Douglas | King | James Forman | John Lewis. copyrights: STEVE SCHAPIRO/GETTY IMAGES";
+
+     display:none;
+     position: absolute;
+     width: 0px;
+     padding: 1rem;
+     height: 0;
+     font-size: .7rem;
+     color: inherit;
+     top:50%;
+     bottom: 50%;
+     z-index: 100;
+     background-color: hsla(263, 50%, 37%, 0.16);
+     
+     line-height: 1.2;
+     opacity: 1;
+}
+#img-div:hover::after{
+     /* opacity: 1; */
+     display: block;
+     width: 250px;
+     height: fit-content;
+}
+
+
 .logo{
      height: 60px;
      width: calc(100%-2rem);
@@ -73,46 +101,21 @@ body{
      color: #fff;
 }
 
-img{
-     max-width: 100%;
-     height:auto;
-}
+
 #image{
      margin-bottom: 1rem;
      position: relative;
-     /* transition: all .7s ease; */
-
+     max-width: 100%;
+     height:auto;
+     display: block;
 }
-#img-div::after{
-     content:"From Left to right: The Rev. Ralph David Abernathy Sr | the Rev. Jesse Douglas | King | James Forman | John Lewis. copyrights: STEVE SCHAPIRO/GETTY IMAGES";
 
-     display:none;
-     position: absolute;
-     width: 0px;
-     padding: 1rem;
-     height: 0;
-     font-size: .7rem;
-     color: inherit;
-     top:50%;
-     bottom: 50%;
-     z-index: 100;
-     background-color: #1186937e;
-     background-color: hsla(263, 50%, 37%, 0.16);
-     
-     line-height: 1.2;
-     opacity: 1;
-}
 figcaption{
      font-style: italic;
      font-size: .7em;
      letter-spacing: 2px;
 }
-#img-div:hover::after{
-     /* opacity: 1; */
-     display: block;
-     width: 250px;
-     height: fit-content;
-}
+
 
 
 .introduction{
@@ -123,9 +126,8 @@ figcaption{
      background-color: green;
      height: 45%;
      min-height: fit-content;
-     background-color: #118593;
+     /* background-color: #118593; */
      background-color: hsl(263, 50%, 37%);
-
 
      display: flex;
      flex-direction: column;
@@ -161,8 +163,88 @@ blockquote{
 
 @media screen and (min-width:1236px){
      #image{
-          max-width: 1100px;
      }
 }
 
 /****section #tribute-info***/
+#tribute-info{
+     background: url('/images/bg.png') ;
+     margin:2rem auto 0;
+
+
+}
+.tribute-info-mask{
+     background: rgba(133, 128, 128, 0.2);   
+     width: 100%;
+     padding: 1rem;
+
+}
+.tribute-info-overlay{
+     margin: 0 auto;
+     padding: 1rem;
+     
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: flex-start;
+     max-width: 1200px;
+
+}
+#tribute-info h2{
+     font-size: 2rem;
+     color:hsl(263, 50%, 37%);
+     margin-bottom: 1rem;
+}
+
+#tribute-info h4{
+     background-color: hsla(263, 50%, 37%, 0.171);
+     padding: .5rem;
+     color:#fefefe;
+
+}
+.chrono-item{
+     margin-bottom: 1rem;
+     line-height:1.5;
+}
+.date{
+     font-style:italic;
+     font-weight: bold;
+     color: red;
+     margin-right: 10px;
+     float: left;
+}
+
+
+/***footer*/
+footer{
+     background-color: #101010;
+     color: #fefefe;
+
+     padding: 2rem;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+
+}
+
+#tribute-link{
+justify-content: center;
+align-items: center;
+background-color: hsl(263, 50%, 37%);
+width: 250px;
+padding: 1rem .5rem;
+
+transition: all 1s ease;
+margin-bottom:1rem ;
+text-align: center;
+}
+#tribute-link:hover{
+     background-color: #fff;
+     color: hsl(263, 50%, 37%);
+}
+
+footer p a{
+     color: white;
+}
